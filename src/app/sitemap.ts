@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { projects } from "@/lib/data";
 
-const BASE_URL = "https://your-domain.com"; // ← Replace with your Vercel URL
+const BASE_URL = "https://prism-template-two.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const projectUrls = projects.map((p) => ({

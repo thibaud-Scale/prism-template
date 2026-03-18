@@ -12,7 +12,7 @@ const inter = Inter({
   weight:   ["400", "500", "600", "700", "800", "900"],
 });
 
-const BASE_URL = "https://your-domain.com"; // ← Replace with your Vercel URL
+const BASE_URL = "https://prism-template-two.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
