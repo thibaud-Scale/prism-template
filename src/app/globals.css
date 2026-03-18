@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-inter);
+
+  --animate-marquee:    marquee    30s linear infinite;
+  --animate-blink:      blink      1.2s step-end infinite;
+  --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
+  --animate-spin-slow:  spin-slow  20s linear infinite;
+
+  @keyframes marquee    { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes blink      { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+  @keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 6px #CDFF3B; } 50% { box-shadow: 0 0 20px #CDFF3B, 0 0 40px rgba(205,255,59,.4); } }
+  @keyframes spin-slow  { to { transform: rotate(360deg); } }
+}
+
+/* ─── Design tokens — inside @layer base so Tailwind does NOT inline them ─── */
+@layer base {
+  :root {
+    --bg:          #0D0D0D;
+    --surface:     #151515;
+    --faint:       #111111;
+    --border:      #1A1A1A;
+    --dim:         #2a2a2a;
+    --muted-2:     #555555;
+    --muted:       #777777;
+    --text:        #F2EFE7;
+    --accent:      #CDFF3B;
+    --nav-overlay: rgba(13, 13, 13, 0.92);
+  }
+
+  [data-theme="light"] {
+    --bg:          #F5F0E8;
+    --surface:     #EDE8DF;
+    --faint:       #E8E3DA;
+    --border:      #D5CFC7;
+    --dim:         #C0BAB1;
+    --muted-2:     #8A847C;
+    --muted:       #A09A91;
+    --text:        #0A0A0A;
+    --accent:      #CDFF3B;
+    --nav-overlay: rgba(245, 240, 232, 0.92);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    body, a, button { cursor: none; }
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: #0D0D0D;
+  }
+
+  ::-webkit-scrollbar       { width: 3px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--accent); }
+
+  /* Accessibility — keyboard focus */
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+  }
+
+  /* Placeholder colors */
+  input::placeholder, textarea::placeholder { color: var(--dim); }
+}

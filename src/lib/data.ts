@@ -1,0 +1,107 @@
+import type { Project, Service } from "@/types";
+
+export const siteConfig = {
+  name:         "Prism",
+  tagline:      "Creative Digital Agency",
+  description:  "We craft digital experiences that captivate and convert. Strategy, design, and development under one roof.",
+  email:        "hello@prism.agency",
+  location:     "Paris, France",
+  availability: "Available for projects",
+  social: {
+    github:   "https://github.com",
+    twitter:  "https://x.com",
+    dribbble: "https://dribbble.com",
+    linkedin: "https://linkedin.com",
+  },
+};
+
+export const projects: Project[] = [
+  {
+    id:              "nebula",
+    title:           "Nebula Dashboard",
+    description:     "A real-time analytics platform with intuitive data visualization and sleek dark UI.",
+    longDescription: "Nebula is a next-generation analytics platform designed for data-driven teams. We built a fully custom component library, real-time WebSocket data pipelines, and a responsive dark-first interface that makes complex data feel effortless. The result: 40% faster decision-making for our client's ops team.",
+    tags:            ["React", "D3.js", "Node.js"],
+    image:           "/images/projects/project-1.webp",
+    featured:        true,
+    color:           "#8b5cf6",
+    year:            2025,
+    role:            "Design & Development",
+    link:            "https://example.com",
+  },
+  {
+    id:              "aurora",
+    title:           "Aurora E-Commerce",
+    description:     "Premium online store with immersive product presentations and seamless checkout.",
+    longDescription: "Aurora redefines luxury e-commerce. We crafted an immersive 3D product viewer, a frictionless one-page checkout flow, and a bespoke CMS that lets the client update the site with zero code. Conversion rate increased by 28% in the first quarter post-launch.",
+    tags:            ["Next.js", "Stripe", "Tailwind"],
+    image:           "/images/projects/project-2.webp",
+    color:           "#CDFF3B",
+    year:            2024,
+    role:            "Full-Stack Development",
+    link:            "https://example.com",
+  },
+  {
+    id:              "vertex",
+    title:           "Vertex SaaS",
+    description:     "A project management platform built for modern teams with real-time collaboration.",
+    longDescription: "Vertex is a SaaS platform designed from the ground up for distributed teams. Features include real-time multiplayer editing, AI-powered task prioritization, and deep integrations with Slack, Jira and GitHub. Scaled to 10k users in the first 6 months.",
+    tags:            ["TypeScript", "PostgreSQL", "AWS"],
+    image:           "/images/projects/project-3.webp",
+    color:           "#14b8a6",
+    year:            2024,
+    role:            "Architecture & Development",
+    link:            "https://example.com",
+  },
+  {
+    id:              "pulse",
+    title:           "Pulse Health",
+    description:     "Health & wellness app with personalized insights and tracking features.",
+    longDescription: "Pulse is a mobile-first wellness companion that combines biometric tracking, AI coaching and community challenges. We designed the full UX from zero, built the React Native app, and set up a real-time Firebase backend — shipped in 14 weeks.",
+    tags:            ["React Native", "Firebase", "Figma"],
+    image:           "/images/projects/project-4.webp",
+    color:           "#ec4899",
+    year:            2024,
+    role:            "UI/UX & Mobile Development",
+    link:            "https://example.com",
+  },
+  {
+    id:              "echo",
+    title:           "Echo Podcast",
+    description:     "Podcast platform with AI-powered transcription and discovery features.",
+    longDescription: "Echo is a creator-first podcast platform. AI transcription, automatic chapter detection, and a semantic search engine make every episode discoverable. We built the full product — brand identity, web app and marketing site.",
+    tags:            ["Next.js", "OpenAI", "Vercel"],
+    image:           "/images/projects/project-5.webp",
+    color:           "#f59e0b",
+    year:            2023,
+    role:            "Brand & Product Design",
+    link:            "https://example.com",
+  },
+  {
+    id:              "cipher",
+    title:           "Cipher Finance",
+    description:     "Fintech dashboard with real-time market data and portfolio management.",
+    longDescription: "Cipher gives retail investors institutional-grade tools. Real-time WebSocket feeds, portfolio analytics with Monte Carlo simulations, and a clean UI that demystifies complex financial data. Built and shipped in 10 weeks for a Series-A fintech startup.",
+    tags:            ["Vue.js", "Python", "WebSocket"],
+    image:           "/images/projects/project-6.webp",
+    color:           "#3b82f6",
+    year:            2023,
+    role:            "Design & Frontend Development",
+    link:            "https://example.com",
+  },
+];
+
+export const services: Service[] = [
+  { id: "design",      title: "UI/UX Design",      description: "Intuitive interfaces and seamless experiences that delight users and drive engagement.",                             icon: "design"    },
+  { id: "development", title: "Web Development",    description: "Performant, scalable web applications built with modern technologies and best practices.",                       icon: "code"      },
+  { id: "strategy",    title: "Digital Strategy",   description: "Data-driven strategies that align your digital presence with your business goals.",                             icon: "strategy"  },
+  { id: "branding",    title: "Brand Identity",     description: "Distinctive visual identities that communicate your values and resonate with your audience.",                    icon: "branding"  },
+  { id: "motion",      title: "Motion Design",      description: "Captivating animations and micro-interactions that bring your interfaces to life.",                              icon: "motion"    },
+  { id: "analytics",   title: "Analytics & SEO",    description: "Performance tracking and search optimization to maximize your digital visibility.",                              icon: "analytics" },
+];
+
+export const navLinks = [
+  { label: "Projects", href: "#projects" },
+  { label: "Services", href: "#services" },
+  { label: "Contact",  href: "#contact"  },
+];
